@@ -1,4 +1,4 @@
-FROM node:18 AS builder
+FROM node:18.12.0 AS builder
 
 ARG REACT_APP_API_URL
 ARG REACT_APP_BUILD_NUMBER
