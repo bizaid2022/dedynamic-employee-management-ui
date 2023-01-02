@@ -20,5 +20,4 @@ RUN rm -rf dotenv
 RUN npm run build
 
 FROM nginx:alpine
-LABEL com.centurylinklabs.watchtower.enable="true"
 COPY --from=builder /app/build /usr/share/nginx/html
