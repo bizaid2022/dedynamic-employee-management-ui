@@ -12,7 +12,7 @@ const initialState = {
 export const getEmployees = createAsyncThunk(
   "employees/getAll",
   async (params) => {
-    const { data, headers } = await axios.get(`${API_URL}/api/read.php`, {
+    const { data } = await axios.get(`${API_URL}/api/read.php`, {
       params: {
         filter: params?.filter,
         page: params?.page,
