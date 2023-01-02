@@ -12,18 +12,14 @@ const initialState = {
 export const getEmployees = createAsyncThunk(
   "employees/getAll",
   async (params) => {
-    // const { data, headers } = await axios.get(`${API_URL}/api/read.php`, {
-    const { data } = await axios.get(
-      `http://172.16.0.14/DEDynamicEmployeeAPI/api/read.php`,
-      {
-        params: {
-          filter: params?.filter,
-          page: params?.page,
-          size: params?.size,
-          is_enable: params?.is_enable,
-        },
-      }
-    );
+    const { data, headers } = await axios.get(`${API_URL}/api/read.php`, {
+      params: {
+        filter: params?.filter,
+        page: params?.page,
+        size: params?.size,
+        is_enable: params?.is_enable,
+      },
+    });
     return data.body;
   }
 );
