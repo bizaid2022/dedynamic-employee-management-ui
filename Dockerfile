@@ -3,8 +3,6 @@ FROM node:18 AS builder
 ARG REACT_APP_API_URL
 ARG REACT_APP_BUILD_NUMBER
 
-LABEL com.centurylinklabs.watchtower.enable="true"
-
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
